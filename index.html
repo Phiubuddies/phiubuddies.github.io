@@ -3,202 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vin | Graphic Designer & Multimedia Artist</title>
-    
+    <title>Ervin K | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'apple-gray': '#F5F5F7',
-                        'apple-dark': '#1D1D1F',
-                    }
-                }
-            }
-        }
-    </script>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* Gradasi ala Apple Music - Background Glow Effect */
-        .glow-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-color: #F5F5F7; /* Apple gray bg */
-            overflow: hidden;
-        }
-
-        .glow-circle {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px); /* Kunci efek blurry gradient */
-            opacity: 0.5;
-            mix-blend-mode: multiply; /* Biar warnanya nyampur cantik */
-        }
-
-        /* Warna Gradasi Apple Music (Pink/Purple/Blue) */
-        .glow-1 { top: -10%; left: -10%; width: 50%; height: 50%; background: #FF3B30; /* Red-ish */ animation: drift 15s infinite alternate; }
-        .glow-2 { bottom: -10%; right: -10%; width: 60%; height: 60%; background: #007AFF; /* Blue */ animation: drift 20s infinite alternate-reverse; }
-        .glow-3 { top: 40%; left: 30%; width: 40%; height: 40%; background: #AF52DE; /* Purple */ animation: drift 18s infinite alternate; opacity: 0.3; }
-
-        @keyframes drift {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(50px, 50px) scale(1.1); }
-        }
-
-        /* Apple-style Project Card: Minimalist with subtle hover */
-        .project-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            background: rgba(255, 255, 255, 0.9);
-        }
-        
-        /* Photography Card */
-        .photo-card {
-            border-radius: 16px;
-            overflow: hidden;
-            background: #fff;
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .photo-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        /* Font styling for Apple aesthetic */
-        h1, h2 { letter-spacing: -0.02em; }
+        body { font-family: 'Inter', sans-serif; background-color: #F5F5F7; color: #1D1D1F; overflow-x: hidden; }
+        .glow-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; filter: blur(100px); opacity: 0.3; overflow: hidden; }
+        .blob { position: absolute; border-radius: 50%; background: #007AFF; animation: move 20s infinite alternate; mix-blend-mode: multiply; }
+        .blob-1 { top: -10%; left: -10%; width: 600px; height: 600px; }
+        .blob-2 { bottom: -10%; right: -10%; width: 500px; height: 500px; animation-delay: -5s; }
+        @keyframes move { from { transform: translate(0, 0) scale(1); } to { transform: translate(100px, 100px) scale(1.1); } }
+        .project-card { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 24px; transition: all 0.3s ease; }
+        .project-card:hover { transform: translateY(-8px); background: rgba(255, 255, 255, 0.9); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        h1, h2, h3 { letter-spacing: -0.02em; color: #000 !important; }
     </style>
 </head>
-<body class="font-sans text-apple-dark bg-apple-gray antialiased">
+<body class="antialiased">
+    <div class="glow-bg"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
 
-    <div class="glow-bg">
-        <div class="glow-circle glow-1"></div>
-        <div class="glow-circle glow-2"></div>
-        <div class="glow-circle glow-3"></div>
-    </div>
-
-    <nav class="fixed w-full z-50 bg-apple-gray/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-xl font-semibold tracking-tight text-black">Vin<span class="text-gray-400"> Portfolio</span></a>
-            <div class="space-x-8 text-sm font-medium text-gray-700">
-                <a href="#work" class="hover:text-black transition">Work</a>
-                <a href="#about" class="hover:text-black transition">About</a>
-                <a href="#contact" class="hover:text-black transition">Contact</a>
-            </div>
+    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-black/5 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-black font-bold">
+            <span>Ervin K.</span>
+            <div class="space-x-8 text-sm font-medium text-gray-500"><a href="#work" class="hover:text-black">Work</a><a href="#contact" class="hover:text-black">Contact</a></div>
         </div>
     </nav>
 
-    <section class="pt-40 pb-24 px-6">
-        <div class="max-w-5xl mx-auto">
-          <h1 class="text-6xl md:text-8xl font-extrabold mb-8 leading-[1.1] text-black uppercase">
-          Where all Creative Things Come 
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl font-medium">
-                Graphic Designer & Multimedia Student specializing in visual identities, 3D Model, and Photography.
-            </p>
-            <a href="#work" class="inline-block px-8 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition text-md">
-                View My Work
-            </a>
-        </div>
+    <section class="pt-48 pb-32 px-6 max-w-6xl mx-auto">
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-8 leading-none uppercase">Where all Creative Things Come.</h1>
+        <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mb-12 font-medium">Graphic Designer & Multimedia Student specializing in visual identities, 3D Model, and Photography.</p>
+        <a href="#work" class="px-8 py-4 bg-black text-white font-bold rounded-full hover:bg-gray-800 transition">Explore Work</a>
     </section>
 
-    <section id="work" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto border-b border-black/5 pb-24">
-            <h2 class="text-sm font-semibold uppercase text-gray-500 tracking-widest mb-4">Featured Projects</h2>
-            <p class="text-4xl font-bold mb-16 text-black">Visual Stories & Interactive Media</p>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <a href="#" class="project-card block p-6">
-                    <div class="aspect-[16/10] rounded-xl overflow-hidden mb-6 bg-gray-200 border border-white/30">
-                        <img src="https://via.placeholder.com/800x500/FF3B30/ffffff?text=Pilihan+Ku+VR" class="w-full h-full object-cover" alt="VR Game Project">
-                    </div>
-                    <div class="px-2">
-                        <span class="text-xs font-bold uppercase text-[#FF3B30] mb-2 block">VR Game / Multimedia</span>
-                        <h3 class="text-2xl font-semibold mb-3 text-black">Pilihan Ku - Unity Game</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">An immersive VR learning platform designed for students with intellectual disabilities. Merging graphic design and 3D interaction.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="project-card block p-6">
-                    <div class="aspect-[16/10] rounded-xl overflow-hidden mb-6 bg-gray-200 border border-white/30">
-                        <img src="https://via.placeholder.com/800x500/007AFF/ffffff?text=Batavia+Culture" class="w-full h-full object-cover" alt="Media Project">
-                    </div>
-                    <div class="px-2">
-                        <span class="text-xs font-bold uppercase text-[#007AFF] mb-2 block">Visual Identity / Design</span>
-                        <h3 class="text-2xl font-semibold mb-3 text-black">Batavia Culture (Bacul)</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Creative direction and brand identity design for an urban lifestyle and cultural media outlet in Jakarta.</p>
-                    </div>
-                </a>
-
+    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-sm font-bold uppercase text-gray-500 tracking-widest mb-16">Featured Work</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <a href="#photography" class="project-card p-6 block">
+                <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-gray-200"><img src="images/foto1.webp" class="w-full h-full object-cover"></div>
+                <h3 class="text-3xl font-extrabold uppercase italic mb-2">Photography Showcase</h3>
+                <p class="text-gray-500 font-medium">Captured perspectives & visual narratives through the lens.</p>
+            </a>
+            <div class="project-card p-6">
+                <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-gray-200"><img src="https://via.placeholder.com/800x450/007AFF/fff?text=Batavia+Culture" class="w-full h-full object-cover"></div>
+                <h3 class="text-3xl font-extrabold uppercase italic mb-2">Batavia Culture</h3>
+                <p class="text-gray-500 font-medium">Branding & Creative Direction for Jakarta's urban media.</p>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto pt-24">
-            <h2 class="text-sm font-semibold uppercase text-gray-500 tracking-widest mb-4">Photography</h2>
-            <p class="text-4xl font-bold mb-12 text-black">Captured Perspectives</p>
-            
+        <div id="photography" class="mt-32">
+            <h2 class="text-4xl font-extrabold mb-12 uppercase italic">Captured Perspectives</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="photo-card aspect-[3/4]">
-                    <img src="images/foto1.webp" alt="Photography 1" class="w-full h-full object-cover">
-                </div>
-                <div class="photo-card aspect-[3/4]">
-                    <img src="images/foto2.webp" alt="Photography 2" class="w-full h-full object-cover">
-                </div>
-                <div class="photo-card aspect-[3/4]">
-                    <img src="images/foto3.webp" alt="Photography 3" class="w-full h-full object-cover">
-                </div>
-                <div class="photo-card aspect-[3/4]">
-                    <img src="images/foto4.webp" alt="Photography 4" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </div>
-        </section>
-
-    <section class="py-24 px-6 bg-apple-dark text-apple-gray">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-sm font-semibold uppercase text-gray-400 tracking-widest mb-16">Tools & Technologies</h2>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-12 text-sm font-medium text-white">
-                <div class="flex flex-col items-center gap-4"><img src="https://img.icons8.com/color/96/figma--v1.png" alt="Figma" class="w-16 h-16"> Figma</div>
-                <div class="flex flex-col items-center gap-4"><img src="https://img.icons8.com/color/96/unity.png" alt="Unity" class="w-16 h-16"> Unity 3D</div>
-                <div class="flex flex-col items-center gap-4"><img src="https://img.icons8.com/color/96/blender-3d.png" alt="Blender" class="w-16 h-16"> Blender</div>
-                <div class="flex flex-col items-center gap-4"><img src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML5" class="w-16 h-16"> HTML/CSS/JS</div>
-                <div class="flex flex-col items-center gap-4"><img src="https://img.icons8.com/color/96/php.png" alt="PHP" class="w-16 h-16"> PHP/AJAX</div>
+                <div class="project-card aspect-[3/4] overflow-hidden"><img src="images/foto1.webp" class="w-full h-full object-cover"></div>
+                <div class="project-card aspect-[3/4] overflow-hidden"><img src="images/foto2.webp" class="w-full h-full object-cover"></div>
+                <div class="project-card aspect-[3/4] overflow-hidden"><img src="images/foto3.webp" class="w-full h-full object-cover"></div>
+                <div class="project-card aspect-[3/4] overflow-hidden"><img src="images/foto4.webp" class="w-full h-full object-cover"></div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto text-center project-card p-16">
-            <h2 class="text-sm font-semibold uppercase text-[#AF52DE] tracking-widest mb-4">Let's Connect</h2>
-            <p class="text-5xl font-extrabold mb-10 text-black leading-tight hover:scale-[1.02] transition-transform cursor-pointer">Ready to create something <br> remarkable?</p>
-            <p class="text-gray-600 mb-12 max-w-xl mx-auto font-medium">Lagi nyari freelance project, kolaborasi, atau sekadar mau ngobrol soal VR game dan desain.</p>
-            <a href="https://wa.me/6281234567890" class="inline-block px-10 py-4 bg-[#AF52DE] text-white font-semibold rounded-full hover:bg-purple-700 hover:shadow-lg transition text-lg">
-                Say Hello on WhatsApp
-            </a>
+    <footer id="contact" class="py-40 text-center px-6">
+        <div class="max-w-4xl mx-auto project-card p-20">
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-10 leading-tight uppercase">Ready to create?</h2>
+            <a href="https://wa.me/6281234567890" class="text-2xl font-bold border-b-4 border-black pb-2 hover:text-gray-500 hover:border-gray-500 transition">Get in touch on WhatsApp</a>
         </div>
-        <div class="text-center mt-20 text-sm text-gray-500">
-            &copy; 2026 Ervin Khayru. Monochrome Aesthetic by phiubuddies.
-        </div>
+        <p class="mt-20 text-gray-400 font-medium">© 2026 Ervin Khayru</p>
     </footer>
-
 </body>
 </html>
