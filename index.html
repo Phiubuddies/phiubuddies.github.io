@@ -43,9 +43,6 @@
             <span>Ervin K.</span>
             <div class="space-x-8 text-sm font-medium text-gray-500">
                 <a href="#work" class="hover:text-black transition">Work</a>
-                <a href="#bacul" class="hover:text-black transition">Bacul</a>
-                <a href="#movie" class="hover:text-black transition">Film</a>
-                <a href="#3d" class="hover:text-black transition">3D Model</a>
                 <a href="#contact" class="hover:text-black transition">Contact</a>
             </div>
         </div>
@@ -62,7 +59,7 @@
         <div class="grid md:grid-cols-2 gap-12 border-b border-black/5 pb-24 text-black text-black">
             <a href="#photography" class="project-card p-6 block text-black">
                 <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-gray-200 shadow-inner">
-                    <img src="images/foto1.webp" class="w-full h-full object-cover" alt="Photography">
+                    <img src="images/foto6.webp" class="w-full h-full object-cover" alt="Photography">
                 </div>
                 <h3 class="text-3xl font-extrabold uppercase italic mb-2">Photography Showcase</h3>
                 <p class="text-gray-500 font-medium">Captured perspectives & visual narratives through the lens.</p>
@@ -74,15 +71,18 @@
                 <h3 class="text-3xl font-extrabold uppercase italic mb-2">Batavia Culture</h3>
                 <p class="text-gray-500 font-medium">Daily update of lifestyle & cultural growth from the time period.</p>
             </a>
+            <a href="#movie" class="project-card p-6 block text-black">
+                <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-gray-200 shadow-inner">
+                    <img src="images/thumbnail.webp" class="w-full h-full object-cover" alt="movie">
+                </div>
+                <h3 class="text-3xl font-extrabold uppercase italic mb-2">Short Film</h3>
+                <p class="text-gray-500 font-medium">Short docummentary film</p>
+            </a>
         </div>
 
         <div id="photography" class="mt-32">
             <h2 class="text-4xl font-extrabold mb-12 uppercase italic text-black">Captured Perspectives</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-black">
-                <div class="photo-card aspect-[3/4]"><img src="images/foto1.webp" class="w-full h-full object-cover"></div>
-                <div class="photo-card aspect-[3/4]"><img src="images/foto2.webp" class="w-full h-full object-cover"></div>
-                <div class="photo-card aspect-[3/4]"><img src="images/foto3.webp" class="w-full h-full object-cover"></div>
-                <div class="photo-card aspect-[3/4]"><img src="images/foto4.webp" class="w-full h-full object-cover"></div>
                 <div class="photo-card aspect-[3/4]"><img src="images/foto5.webp" class="w-full h-full object-cover"></div>
                 <div class="photo-card aspect-[3/4]"><img src="images/foto6.webp" class="w-full h-full object-cover"></div>
                 <div class="photo-card aspect-[3/4]"><img src="images/foto7.webp" class="w-full h-full object-cover"></div>
@@ -91,6 +91,11 @@
                 <div class="photo-card aspect-[3/4]"><img src="images/foto10.webp" class="w-full h-full object-cover"></div>
                 <div class="photo-card aspect-[3/4]"><img src="images/foto11.webp" class="w-full h-full object-cover"></div>
                 <div class="photo-card aspect-[3/4]"><img src="images/foto12.webp" class="w-full h-full object-cover"></div>
+                <div class="photo-card aspect-[3/4]"><img src="images/foto1.webp" class="w-full h-full object-cover"></div>
+                <div class="photo-card aspect-[3/4]"><img src="images/foto2.webp" class="w-full h-full object-cover"></div>
+                <div class="photo-card aspect-[3/4]"><img src="images/foto3.webp" class="w-full h-full object-cover"></div>
+                <div class="photo-card aspect-[3/4]"><img src="images/foto4.webp" class="w-full h-full object-cover"></div>
+
             </div>
         </div>
     </section>
@@ -182,39 +187,42 @@
         </div>
     </section>
 
-    <section id="3d" class="py-32 px-6 max-w-7xl mx-auto mt-24 border-t border-black/5 text-black">
-        <div class="text-center mb-20 text-black">
-            <h2 class="text-sm font-bold uppercase text-gray-400 tracking-[0.3em] mb-4 text-black">3D Game Asset</h2>
-            <p class="text-5xl md:text-7xl font-extrabold text-black italic uppercase text-black text-black">Samurai Opponent.</p>
+   <section id="samurai-project" class="py-32 px-6 max-w-7xl mx-auto mt-24 border-t border-black/5 text-black">
+    <div class="grid md:grid-cols-12 gap-12 items-start mb-20">
+        <div class="md:col-span-7">
+            <h2 class="text-sm font-bold uppercase text-gray-400 tracking-[0.3em] mb-4">Game Development</h2>
+            <p class="text-6xl md:text-8xl font-extrabold text-black italic uppercase leading-none">Samurai<br>Fight.</p>
         </div>
-        
-        <div class="max-w-4xl mx-auto project-card p-4 aspect-square md:aspect-video overflow-hidden relative shadow-inner bg-gray-100/50">
-            <model-viewer 
-                src="assets/3d/samurai.glb" 
-                alt="3D Samurai Character" 
-                auto-rotate 
-                camera-controls 
-                touch-action="pan-y"
-                shadow-intensity="1" 
-                exposure="1"
-                environment-image="neutral"
-                ar>
-                <div slot="poster" class="flex items-center justify-center h-full text-gray-400 font-bold uppercase tracking-widest">
-                    Loading Samurai...
-                </div>
-            </model-viewer>
-            
-            <div class="absolute bottom-6 left-6 bg-white/80 backdrop-blur px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-black shadow-sm">
-                Interact: Drag to Rotate • Scroll to Zoom
+        <div class="md:col-span-5 pt-8">
+            <p class="text-xl text-gray-600 font-medium leading-relaxed mb-6">
+                Proyek pengembangan game 3D berjudul Samurai Fight. Fokus pada mekanik pertarungan strategi dan taktik untuk memenangkan permainan.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-black text-white text-xs font-bold rounded-full">Unity</span>
+                <span class="px-4 py-2 bg-black text-white text-xs font-bold rounded-full">Blender</span>
+                <span class="px-4 py-2 bg-black text-white text-xs font-bold rounded-full">C# Scripting</span>
             </div>
         </div>
+    </div>
 
-        <div class="max-w-2xl mx-auto mt-12 text-center text-black">
-            <p class="text-gray-500 font-medium">
-                Karakter opponent utama yang dikembangkan untuk proyek game Samurai Fight. Didesain dan dirigger sepenuhnya menggunakan Blender.
-            </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="photo-card aspect-square md:col-span-2 relative group overflow-hidden">
+            <img src="images/samurai_render.webp" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Samurai Character Design">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                <h4 class="text-white text-2xl font-bold italic uppercase">The Opponent Character</h4>
+            </div>
         </div>
-    </section>
+        
+        <div class="grid grid-rows-2 gap-6">
+            <div class="photo-card overflow-hidden group">
+                <img src="images/game_env.webp" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Environment">
+            </div>
+            <div class="photo-card overflow-hidden group">
+                <img src="images/game_ui.webp" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="UI Design">
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer id="contact" class="py-40 text-center px-6 text-black">
         <div class="max-w-4xl mx-auto project-card p-20 text-black">
